@@ -9,6 +9,7 @@ def index(request):
 
     return render(request, "test.html")
 
+
 def logout(request):
     """ Logs the user out """
 
@@ -16,3 +17,9 @@ def logout(request):
     messages.success(request, "You have successfully been logged out!")
 
     return redirect(reverse('index'))
+
+
+def login(request):
+    """ Logs the user in """
+
+    return render(request, 'login.html')
