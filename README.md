@@ -20,11 +20,11 @@ These are potential actions that users of the website would want to perform.
 
 ### Wireframes
 
-![Homepage](wireframes/homepage.jpg "Homepage")
+![Homepage](static/wireframes/homepage.jpg "Homepage")
 
-![Request Commissions](wireframes/request.jpg "Request Commissions")
+![Request Commissions](static/wireframes/request.jpg "Request Commissions")
 
-![Profile Page](wireframes/profile.jpg "Profile Page")
+![Profile Page](static/wireframes/profile.jpg "Profile Page")
 
 ## Database
 
