@@ -16,14 +16,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="{% static 'css/style.css'%}" type="text/css" />
     <title>{% block page_title %}{% endblock %}</title>
   </head>
   <body>
-<h1>
-        {% block page_heading %}{% endblock %}
-    </h1>
-
     <nav>
         <ul>
             {% if user.is_authenticated %}
