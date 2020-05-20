@@ -1,6 +1,4 @@
-
-{% load staticfiles %}
-{% load bootstrap_tags %}
+{% load staticfiles %} {% load bootstrap_tags %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,21 +19,26 @@
   </head>
   <body>
     <nav>
-        <ul>
-            <li><a href="{% url 'home' %}">Home</a></li>
-            {% if user.is_authenticated %}
-            <li><a href="{% url 'profile' %}">Profile</a></li>
-            <li><a href="{% url 'logout' %}">Logout</a></li>
-            {% else %}
-            <li><a href="{% url 'login' %}">Login</a></li>
-            <li><a href="{% url 'registration' %}">Register</a></li>
-            {% endif %}
-        </ul>
+      <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        {% if user.is_authenticated %}
+        <li><a href="{% url 'profile' %}">Profile</a></li>
+        <li><a href="{% url 'logout' %}">Logout</a></li>
+        {% else %}
+        <li><a href="{% url 'login' %}">Login</a></li>
+        <li><a href="{% url 'registration' %}">Register</a></li>
+        {% endif %}
+      </ul>
     </nav>
 
-    <hr> {% if messages %}
+    <h1>
+      {% block page_heading %} {% endblock %}
+    </h1>
+
+    <hr />
+    {% if messages %}
     <div>
-        {% for message in messages %} {{ message }} {% endfor %}
+      {% for message in messages %} {{ message }} {% endfor %}
     </div>
     {% endif %} {% block content %}{% endblock %}
 
