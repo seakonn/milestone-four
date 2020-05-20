@@ -17,9 +17,11 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from commissions.views import home
 from accounts import urls as accounts_urls
+from commissions import urls as commissions_urls
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', home, name="home"),
-    url(r'^accounts/', include(accounts_urls))
+    url(r'^accounts/', include(accounts_urls)),
+    url(r'^commissions/', include(commissions_urls))
 ]
