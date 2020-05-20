@@ -8,7 +8,11 @@
 
 {% if user.is_authenticated %}
 
+    <h2>Form goes here</h2>
+
 {% else %}
+
+<h4>You must be <a href="{% url 'login' %}">logged in</a> to request a commission</h4>
 
 {% endif %}
 
