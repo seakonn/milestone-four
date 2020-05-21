@@ -8,14 +8,10 @@
 
 {% if user.is_authenticated %}
 
-    <form method="POST">
-    
-    {% csrf_token %}
-
-    {{ form }}
-    
-    <button type="submit">Request Commission</button>
-    
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">Request Commission</button>
     </form>
 
 {% else %}

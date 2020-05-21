@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .forms import CommissionForm
 
 # Create your views here.
@@ -12,6 +12,14 @@ def home(request):
 def request_commission(request):
     """ Returns the request commission page """
 
-    form = CommissionForm()
+    if request.method == "POST":
+        
+        form = CommissionForm(request.POST, request.FILES)
+        
+        if form.is_valid():
+            form.save()
+            return redirect(home)
+    else:
+        form = CommissionForm()
 
     return render(request, 'request.html', {'form': form})
