@@ -4,4 +4,16 @@
 
 {% block content %}
     <h1>My Commissions</h1>
+
+    {% for commission in commissions %}
+
+        <p>
+        <span>{{ commission.owner }} </span>
+        <span> {{ commission.name }} </span>
+        <span> {{ commission.description }} </span>
+        </p>
+        
+
+    {% endfor %}
+
 {% endblock %}

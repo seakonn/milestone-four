@@ -3,6 +3,7 @@ from django.contrib import auth, messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from accounts.forms import UserLoginForm, UserRegistrationForm
+from commissions.models import Commission
 
 
 @login_required
@@ -64,4 +65,10 @@ def registration(request):
 def user_profile(request):
     """The user's profile page"""
     user = User.objects.get(email=request.user.email)
-    return render(request, 'profile.html', {"profile": user})
+
+    # get commissions specific to the current user
+
+    commissions = Commission.objects.filter(owner=request.user)
+
+
+    return render(request, 'profile.html', {"commissions": commissions})
