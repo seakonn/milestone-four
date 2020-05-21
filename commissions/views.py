@@ -17,6 +17,10 @@ def request_commission(request):
         form = CommissionForm(request.POST, request.FILES)
         
         if form.is_valid():
+            
+            #want to add current logged in user as registering the commission
+            temp = form.save(commit=False)
+            temp.owner = request.user
             form.save()
             return redirect(home)
     else:
