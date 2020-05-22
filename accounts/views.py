@@ -64,11 +64,8 @@ def registration(request):
 
 def user_profile(request):
     """The user's profile page"""
-    user = User.objects.get(email=request.user.email)
 
     # get commissions specific to the current user
-
     commissions = Commission.objects.filter(owner=request.user)
-
 
     return render(request, 'profile.html', {"commissions": commissions})

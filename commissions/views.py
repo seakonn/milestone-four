@@ -27,3 +27,9 @@ def request_commission(request):
         form = CommissionForm()
 
     return render(request, 'request.html', {'form': form})
+
+
+def display_commission(request, id):
+    """ Displays the requested commission page """
+
+    return render(request, 'commission.html')
