@@ -2,6 +2,9 @@
 
 {% block content %}
 
-<h1>Commission for: </h1>
+<h1>Commission for: {{ commission }} </h1>
+
+<p>Name: {{ commission.name }}</p>
+<p>Desc: {{ commission.description }}</p>
 
 {% endblock %}
