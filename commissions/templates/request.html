@@ -14,6 +14,13 @@
         <button type="submit">Request Commission</button>
     </form>
 
+    {% for type in comm_types %}
+
+        <p>{{ type.type_name }}</p>
+        <p>{{ type.price }}</p>
+
+    {% endfor %}
+
 {% else %}
 
 <h4>You must be <a href="{% url 'login' %}">logged in</a> to request a commission</h4>

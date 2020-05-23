@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .forms import CommissionForm
-from .models import Commission
+from .models import Commission, CommissionType
 
 # Create your views here.
 
@@ -12,6 +12,8 @@ def home(request):
 
 def request_commission(request):
     """ Returns the request commission page """
+
+    comm_types = CommissionType.objects.all()
 
     if request.method == "POST":
 
@@ -27,12 +29,12 @@ def request_commission(request):
     else:
         form = CommissionForm()
 
-    return render(request, 'request.html', {'form': form})
+    return render(request, 'request.html', {'form': form, 'comm_types': comm_types})
 
 
 def display_commission(request, id):
     """ Displays the requested commission page """
 
     the_commission = get_object_or_404(Commission, pk=id)
-    
+
     return render(request, 'commission.html', {'commission': the_commission})
