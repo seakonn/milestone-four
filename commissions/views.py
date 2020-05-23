@@ -24,12 +24,17 @@ def request_commission(request):
             # want to add current logged in user as registering the commission
             temp = form.save(commit=False)
             temp.owner = request.user
+
+            # want to associate commission with the uploaded commission type
+            temp.type = comm_types.get(type_name=request.POST['ctypes'])
+
             form.save()
             return redirect(home)
     else:
         form = CommissionForm()
 
-    return render(request, 'request.html', {'form': form, 'comm_types': comm_types})
+    return render(request, 'request.html',
+                  {'form': form, 'comm_types': comm_types})
 
 
 def display_commission(request, id):
