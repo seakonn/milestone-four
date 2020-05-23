@@ -9,6 +9,7 @@ class Commission(models.Model):
     name = models.CharField(max_length=254, default='')
     description = models.TextField()
     owner = models.ForeignKey(User, null=True, on_delete=models.CASCADE)
+    type = models.ForeignKey(CommissionType, null=True, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name
