@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .forms import CommissionForm
 from .models import Commission, CommissionType
+from accounts.views import user_profile
 
 # Create your views here.
 
@@ -29,7 +30,7 @@ def request_commission(request):
             temp.type = comm_types.get(type_name=request.POST['ctypes'])
 
             form.save()
-            return redirect(home)
+            return redirect(user_profile)
     else:
         form = CommissionForm()
 

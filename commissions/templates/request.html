@@ -8,6 +8,16 @@
 
 {% if user.is_authenticated %}
 
+<h4>Price List</h4>
+{% for type in comm_types %}
+
+        <p>{{ type.type_name }} <span>€{{ type.price }}</span> </p>
+        
+
+{% endfor %}
+
+<p>Remember you don't pay for your Commission until after you have requested it and seen your preview</p>
+
     <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form }}
@@ -24,13 +34,6 @@
 
         <button type="submit">Request Commission</button>
     </form>
-
-    {% for type in comm_types %}
-
-        <p>{{ type.type_name }}</p>
-        <p>{{ type.price }}</p>
-
-    {% endfor %}
 
 {% else %}
 
