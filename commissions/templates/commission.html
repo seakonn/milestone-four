@@ -6,10 +6,20 @@
 <h2>Name: {{ commission.name }}</h2>
 <p>Desc: {{ commission.description }}</p>
 
-<h2>Commission Preview</h2>
+{% if commission.paid %}
 
-<p>If you are happy with your preview, you can pay for it.</p>
-<p>Price: €{{ commission.type.price }}</p>
-<a href="#">Pay for Commission</a>
+    <p>Congratulations on your purchase! Your artwork is on it's way to you, we hope you enjoy it. Meanwhile here is what your finished piece looks like. Thank you for using Ozzy's Art Commissions!</p>
+    <h2>Completed Commission</h2>
+    <img src="{{ commission.type.completed_url }} " alt="Completed Commission">
+
+
+{% else %}
+    <h2>Commission Preview</h2>
+    <img src="{{ commission.type.preview_url }} " alt="Commission Preview">
+
+    <p>If you are happy with your preview, you can pay for it.</p>
+    <p>Price: €{{ commission.type.price }}</p>
+    <a href="#">Pay for Commission</a>
+{% endif %}
 
 {% endblock %}
