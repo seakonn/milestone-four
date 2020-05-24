@@ -4,3 +4,5 @@ accounts/migrations/__pycache__/
 db.sqlite3
 commissions/__pycache__/
 commissions/migrations/__pycache__/
+checkout/__pycache__/
+checkout/migrations/__pycache__/
