@@ -2,9 +2,14 @@
 
 {% block content %}
 
-<h1>Commission for: {{ commission }} </h1>
-
-<p>Name: {{ commission.name }}</p>
+<h1>Your Commission</h1>
+<h2>Name: {{ commission.name }}</h2>
 <p>Desc: {{ commission.description }}</p>
+
+<h2>Commission Preview</h2>
+
+<p>If you are happy with your preview, you can pay for it.</p>
+<p>Price: €{{ commission.type.price }}</p>
+<a href="#">Pay for Commission</a>
 
 {% endblock %}

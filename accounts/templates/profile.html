@@ -8,10 +8,15 @@
     {% for commission in commissions %}
 
         <p>
-        <span>{{ commission.owner }} </span>
         <span> {{ commission.name }} </span>
         <span> {{ commission.description }} </span>
         <span> {{ commission.type.price }} </span>
+        {% if commission.paid %}
+        <span> Paid </span>
+        {% else %}
+        <span> Unpaid </span>
+        {% endif %}
+
         <span> <span><a href="{% url 'commission' commission.id %}">See Commission</a></span> </span>
         
         </p>
