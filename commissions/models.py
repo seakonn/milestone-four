@@ -19,6 +19,7 @@ class Commission(models.Model):
     description = models.TextField()
     owner = models.ForeignKey(User, null=True, on_delete=models.CASCADE)
     type = models.ForeignKey(CommissionType, null=True, on_delete=models.CASCADE)
+    paid = models.BooleanField(default=False)
 
     def __str__(self):
         return self.name
