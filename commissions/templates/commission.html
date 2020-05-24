@@ -19,7 +19,7 @@
 
     <p>If you are happy with your preview, you can pay for it.</p>
     <p>Price: €{{ commission.type.price }}</p>
-    <a href="#">Pay for Commission</a>
+    <a href="{% url 'checkout' commission.id %}">Pay for Commission</a>
 {% endif %}
 
 {% endblock %}
