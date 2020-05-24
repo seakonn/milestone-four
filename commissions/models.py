@@ -8,6 +8,8 @@ class CommissionType(models.Model):
 
     type_name = models.CharField(max_length=254, default='')
     price = models.IntegerField(default=0)
+    preview_url = models.CharField(max_length=254, default='')
+    completed_url = models.CharField(max_length=254, default='')
 
     def __str__(self):
         return self.type_name
