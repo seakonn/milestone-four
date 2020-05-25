@@ -46,6 +46,7 @@ def checkout(request, id):
             if customer.paid:
                 messages.error(request, "You have successfully paid")
                 commission.paid = True
+                commission.save()
                 return render(request, "commission.html", {"commission": commission})
             else:
                 messages.error(request, "Unable to take payment")
