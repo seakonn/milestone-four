@@ -1,5 +1,6 @@
 from django.db import models
-from commissions.models import Commission, CommissionType
+from commissions.models import Commission
+
 
 # Create your models here.
 class Order(models.Model):
@@ -20,8 +21,7 @@ class Order(models.Model):
 class OrderLineItem(models.Model):
     order = models.ForeignKey(Order, null=False)
     commission = models.ForeignKey(Commission, null=False)
-    
+
     def __str__(self):
         return "{0} @ {1}".format(
             self.commission.name, self.commission.type.price)
-
