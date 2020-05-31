@@ -10,5 +10,6 @@ https://github.com/Code-Institute-Solutions/AuthenticationAndAuthorisation/tree/
 ********************************************************************
 """
 
+
 class AccountsConfig(AppConfig):
     name = 'accounts'
