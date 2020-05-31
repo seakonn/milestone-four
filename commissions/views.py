@@ -41,6 +41,6 @@ def request_commission(request):
 def display_commission(request, id):
     """ Displays the requested commission page """
 
-    the_commission = get_object_or_404(Commission, pk=id)
+    commission = get_object_or_404(Commission, pk=id)
 
-    return render(request, 'commission.html', {'commission': the_commission})
+    return render(request, 'commission.html', {'commission': commission})
