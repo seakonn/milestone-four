@@ -10,8 +10,8 @@ https://github.com/Code-Institute-Solutions/PuttingItAllTogether-Ecommerce/blob/
 
 $(function() {
     $("#payment-form").submit(function() {
-        var form = this;
-        var card = {
+        let form = this;
+        let card = {
             number: $("#id_credit_card_number").val(),
             expMonth: $("#id_expiry_month").val(),
             expYear: $("#id_expiry_year").val(),
