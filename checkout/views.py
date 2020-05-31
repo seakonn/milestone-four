@@ -9,6 +9,15 @@ from commissions.models import Commission
 from commissions.views import display_commission
 import stripe
 
+"""
+********************************************************************
+
+ORIGINAL CODE IN THIS FILE COPIED FROM:
+
+https://github.com/Code-Institute-Solutions/PuttingItAllTogether-Ecommerce/tree/master/03-HostingYourEcommerceWebApp/07-heroku_hosting/checkout
+
+********************************************************************
+"""
 
 # Create your views here.
 
