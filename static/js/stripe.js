@@ -1,3 +1,13 @@
+/*
+********************************************************************
+
+ORIGINAL CODE IN THIS FILE COPIED FROM:
+
+https://github.com/Code-Institute-Solutions/PuttingItAllTogether-Ecommerce/blob/master/03-HostingYourEcommerceWebApp/07-heroku_hosting/static/js/stripe.js
+
+********************************************************************
+*/
+
 $(function() {
     $("#payment-form").submit(function() {
         var form = this;
