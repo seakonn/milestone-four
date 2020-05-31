@@ -11,6 +11,7 @@ https://github.com/Code-Institute-Solutions/PuttingItAllTogether-Ecommerce/tree/
 ********************************************************************
 """
 
+
 class OrderLineAdminInline(admin.TabularInline):
     model = OrderLineItem
 

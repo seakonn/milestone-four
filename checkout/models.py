@@ -11,6 +11,7 @@ https://github.com/Code-Institute-Solutions/PuttingItAllTogether-Ecommerce/tree/
 ********************************************************************
 """
 
+
 # Create your models here.
 class Order(models.Model):
     full_name = models.CharField(max_length=50, blank=False)

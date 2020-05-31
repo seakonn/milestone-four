@@ -10,5 +10,6 @@ https://github.com/Code-Institute-Solutions/PuttingItAllTogether-Ecommerce/tree/
 ********************************************************************
 """
 
+
 class CheckoutConfig(AppConfig):
     name = 'checkout'
