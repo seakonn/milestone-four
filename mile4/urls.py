@@ -1,3 +1,20 @@
+from django.conf.urls import url, include
+from django.contrib import admin
+from commissions.views import home
+from accounts import urls as accounts_urls
+from commissions import urls as commissions_urls
+from checkout import urls as checkout_urls
+
+"""
+********************************************************************
+
+ORIGINAL CODE IN THIS FILE COPIED FROM:
+
+https://github.com/Code-Institute-Solutions/AuthenticationAndAuthorisation/tree/master/07-CustomAuthentication/01-email_authentication/django_auth
+
+********************************************************************
+"""
+
 """mile4 URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -13,12 +30,6 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url, include
-from django.contrib import admin
-from commissions.views import home
-from accounts import urls as accounts_urls
-from commissions import urls as commissions_urls
-from checkout import urls as checkout_urls
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
