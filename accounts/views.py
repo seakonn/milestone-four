@@ -5,6 +5,16 @@ from django.contrib.auth.models import User
 from accounts.forms import UserLoginForm, UserRegistrationForm
 from commissions.models import Commission
 
+"""
+********************************************************************
+
+ORIGINAL CODE IN THIS FILE COPIED FROM:
+
+https://github.com/Code-Institute-Solutions/AuthenticationAndAuthorisation/tree/master/07-CustomAuthentication/01-email_authentication/accounts
+
+********************************************************************
+"""
+
 
 @login_required
 def logout(request):

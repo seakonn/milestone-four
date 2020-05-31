@@ -1,5 +1,15 @@
 from django.contrib.auth.models import User
 
+"""
+********************************************************************
+
+ORIGINAL CODE IN THIS FILE COPIED FROM:
+
+https://github.com/Code-Institute-Solutions/AuthenticationAndAuthorisation/tree/master/07-CustomAuthentication/01-email_authentication/accounts
+
+********************************************************************
+"""
+
 
 class EmailAuth:
     """Authenticate a user by an exact match on the email and password"""
