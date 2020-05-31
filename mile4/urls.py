@@ -34,8 +34,8 @@ Including another URLconf
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', home, name="home"),
-    url(r'^accounts/', include(accounts_urls, namespace='accounts')),
-    url(r'^commissions/', include(commissions_urls, namespace='commissions')),
-    url(r'^checkout/', include(checkout_urls, namespace='checkout'))
+    url(r'^accounts/', include(accounts_urls)),
+    url(r'^commissions/', include(commissions_urls)),
+    url(r'^checkout/', include(checkout_urls))
 
 ]
