@@ -1,5 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 #tester {
     color: red !important;
+}
+
+.nav-title {
+    font-family: 'Montserrat', sans-serif;
 }
 
 .container {
