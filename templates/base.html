@@ -71,24 +71,20 @@ https://github.com/Code-Institute-Solutions/AuthenticationAndAuthorisation/tree/
         </div>
     </nav>
 
-
-
-
-
-
-
-
-
-    <h1>
-      {% block page_heading %} {% endblock %}
-    </h1>
-
+    <div class="container">
+        <h1>
+        {% block page_heading %} {% endblock %}
+        </h1>
     
-    {% if messages %}
-    <div>
-      {% for message in messages %} {{ message }} {% endfor %}
+        {% if messages %}
+        <div>
+        {% for message in messages %} {{ message }} {% endfor %}
+        </div>
+        {% endif %} {% block content %}{% endblock %}
     </div>
-    {% endif %} {% block content %}{% endblock %}
+
+    <footer>
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
