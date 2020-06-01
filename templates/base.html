@@ -49,21 +49,21 @@ https://github.com/Code-Institute-Solutions/AuthenticationAndAuthorisation/tree/
 
                 {% if user.is_authenticated %}
                 <li class="nav-item">
-                    <a class="nav-link text-center nav-title" href="{% url 'request_commission' %}">Request Commission</a>
+                    <a class="nav-link text-center" id="nav-links-custom" href="{% url 'request_commission' %}">Request Commission</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-center nav-title" href="{% url 'profile' %}">Profile</a>
+                    <a class="nav-link text-center" id="nav-links-custom" href="{% url 'profile' %}">Profile</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-center nav-title" href="{% url 'logout' %}">Logout</a>
+                    <a class="nav-link text-center" id="nav-links-custom" href="{% url 'logout' %}">Logout</a>
                 </li>
 
                 {% else %}
                 <li class="nav-item">
-                    <a class="nav-link text-center nav-title" href="{% url 'login' %}">Login</a>
+                    <a class="nav-link text-center" id="nav-links-custom" href="{% url 'login' %}">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-center nav-title" href="{% url 'registration' %}">Register</a>
+                    <a class="nav-link text-center" id="nav-links-custom" href="{% url 'registration' %}">Register</a>
                 </li>
 
                 {% endif %}

@@ -8,6 +8,11 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+#nav-links-custom {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
 .navbar-custom {
     background-color: #004ba8 !important;
 }
