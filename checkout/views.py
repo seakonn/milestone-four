@@ -25,6 +25,10 @@ stripe.api_key = settings.STRIPE_SECRET
 
 @login_required()
 def checkout(request, id):
+    """
+    Renders the checkout page, and processes any user/payment information
+    sent to it
+    """
     if request.method == "POST":
         order_form = OrderForm(request.POST)
         payment_form = MakePaymentForm(request.POST)

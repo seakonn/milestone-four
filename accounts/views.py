@@ -18,14 +18,14 @@ https://github.com/Code-Institute-Solutions/AuthenticationAndAuthorisation/tree/
 
 @login_required
 def logout(request):
-    """Log the user out"""
+    """Logs the user out and brings them to the home page"""
     auth.logout(request)
     messages.success(request, "You have successfully been logged out")
     return redirect(reverse('home'))
 
 
 def login(request):
-    """Return a login page"""
+    """Renders the login page and authenticates users"""
     if request.user.is_authenticated:
         return redirect(reverse('home'))
     if request.method == "POST":
@@ -48,7 +48,7 @@ def login(request):
 
 
 def registration(request):
-    """Render the registration page"""
+    """Render the registration page and process new registrations"""
     if request.user.is_authenticated:
         return redirect(reverse('home'))
 
@@ -73,7 +73,7 @@ def registration(request):
 
 
 def user_profile(request):
-    """The user's profile page"""
+    """Shows the status of commissions the user has ordered"""
 
     # get commissions specific to the current user
     commissions = Commission.objects.filter(owner=request.user)

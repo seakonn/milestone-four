@@ -7,12 +7,15 @@ from accounts.views import user_profile
 
 
 def home(request):
-    """Return the home.html file"""
+    """Return the home page"""
     return render(request,  'home.html')
 
 
 def request_commission(request):
-    """ Returns the request commission page """
+    """
+    Returns the request commission page and processes any
+    commission information posted by the user
+    """
 
     comm_types = CommissionType.objects.all()
 
@@ -39,7 +42,7 @@ def request_commission(request):
 
 
 def display_commission(request, id):
-    """ Displays the requested commission page """
+    """ Displays a specific commission page from its id """
 
     commission = get_object_or_404(Commission, pk=id)
 
