@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+body {
+    position: relative;
+    padding-bottom: 5rem;
+    min-height: 100vh;
+}
+
 #tester {
     color: red !important;
 }
@@ -15,13 +21,6 @@
 
 .navbar-custom {
     background-color: #004ba8 !important;
-}
-
-.container {
-    
-    /* this is a fix for the footer being positioned absolutely,
-        so that it sits on top of the container */
-    padding-bottom: 5rem;
 }
 
 .footer {
