@@ -1,3 +1,23 @@
 #tester {
     color: red !important;
 }
+
+.container {
+    
+    /* this is a fix for the footer being positioned absolutely,
+        so that it sits on top of the container */
+    padding-bottom: 5rem;
+}
+
+.footer {
+
+    /*
+    This code originally from:
+    https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/
+    */
+    background-color: green;
+    min-height: 5rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
