@@ -14,9 +14,10 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-#nav-links-custom {
+.nav-link {
     font-family: 'Montserrat', sans-serif;
-    color: white;
+    /* using important to overwrite bootstrap's colour */
+    color: white !important;
 }
 
 .navbar-custom {
