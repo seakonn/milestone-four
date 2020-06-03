@@ -20,6 +20,10 @@ body {
     color: white !important;
 }
 
+.nav-item:hover {
+    background-color: #3e78b2;
+}
+
 .navbar-custom {
     background-color: #004ba8 !important;
 }
