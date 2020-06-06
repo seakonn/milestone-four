@@ -6,10 +6,6 @@ body {
     min-height: 100vh;
 }
 
-#tester {
-    color: red !important;
-}
-
 .nav-title {
     font-family: 'Montserrat', sans-serif;
 }
@@ -30,6 +26,10 @@ body {
 
 .nav-icon {
     margin-left: 0.5rem;
+}
+
+.home-image {
+    margin: 1rem 0;
 }
 
 .footer {
