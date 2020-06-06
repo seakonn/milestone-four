@@ -36,4 +36,10 @@ https://github.com/Code-Institute-Solutions/AuthenticationAndAuthorisation/tree/
 
     {% endfor %}
 
+    {% if not commissions %}
+    <p>You haven't commissioned anything yet!</p>
+
+    <p><a href="{% url 'request_commission' %}">Request one here</a></p>
+    {% endif %}
+
 {% endblock %}
