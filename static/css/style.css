@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aleo&display=swap');
 
 body {
     position: relative;
@@ -31,6 +32,10 @@ body {
 .home-image {
     margin: 1rem 0;
     display: block;
+}
+
+.content-font {
+    font-family: 'Aleo', serif;
 }
 
 .footer {
