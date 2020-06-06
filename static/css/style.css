@@ -38,6 +38,10 @@ body {
     font-family: 'Aleo', serif;
 }
 
+.login-form {
+    
+}
+
 .footer {
 
     /*
@@ -49,4 +53,21 @@ body {
     position: absolute;
     bottom: 0;
     width: 100%;
+}
+
+
+@media (max-width: 575px) {
+    
+    .login-form {
+        min-width: 90%;
+       
+    }
+}
+
+@media (min-width: 576px) {
+    
+    .login-form {
+        max-width: 60%;
+        min-width: 60%;
+    }
 }

@@ -17,10 +17,17 @@ Home
 
 {% block content %}
 
-<form method="POST">
-    {% csrf_token %} {{ login_form | as_bootstrap }}
-    <button type="submit">Login</button>
-</form>
-<p><a href="{% url 'password_reset' %}">Reset Password</a></p>
+<div class="d-flex justify-content-center">
+    <form method="POST" class="login-form">
+        
+        {% csrf_token %} {{ login_form | as_bootstrap }}
+        <button type="submit">Login</button>
+        
+    </form>
+</div>
+
+    <p class="text-center"><a href="{% url 'password_reset' %}">Reset Password</a></p>
+
+
 
 {% endblock %}
