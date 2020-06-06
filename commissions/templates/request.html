@@ -10,20 +10,33 @@
 
 {% if user.is_authenticated %}
 
-<h4>Price List</h4>
-
 <p>Here you can request a commission for our artists to do.</p>
 
 <p>Here's how it works: Give us a description of what you would like, and the type of piece it should be. You will then be provided with a preview of what the final piece should look like. </p>
 
 <p>If you like the preview, you can then commit to a purchase, and your work will be completed and posted to you.</p>
 
-{% for type in comm_types %}
+<h4>Price List</h4>
 
-        <p>{{ type.type_name }} <span>€{{ type.price }}</span> </p>
+
+<table class="table table-striped text-center price-table">
+  <thead>
+    <tr>
+      <th scope="col">Commission Type</th>
+      <th scope="col">Price in €</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for type in comm_types %}
+
+        <tr>
+            <td>{{ type.type_name }}</td>
+            <td>{{ type.price }}</td>
+        </tr>
         
-
-{% endfor %}
+    {% endfor %}
+  </tbody>
+</table>
 
 <p>Remember you don't pay for your Commission until after you have requested it and seen your preview</p>
 
