@@ -16,7 +16,15 @@ My Commissions
 
 {% block content %}
     
-    
+{% if not commissions %}
+
+<p>You haven't commissioned anything yet!</p>
+
+<p><a href="{% url 'request_commission' %}">Request one here</a></p>    
+
+{% else %}
+
+<p>Here are items you have commissioned. Click on the link to see your preview.</p>
 
 <table class="table table-striped text-center price-table">
     <thead>
@@ -45,11 +53,7 @@ My Commissions
     </tbody>
 </table>
 
-{% if not commissions %}
 
-<p>You haven't commissioned anything yet!</p>
-
-<p><a href="{% url 'request_commission' %}">Request one here</a></p>
 
 {% endif %}
 
