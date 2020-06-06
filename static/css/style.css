@@ -42,6 +42,11 @@ body {
     
 }
 
+.price-table {
+    margin: 0 auto;
+    width: 100%;
+}
+
 .footer {
 
     /*
@@ -69,5 +74,9 @@ body {
     .login-form {
         max-width: 60%;
         min-width: 60%;
+    }
+
+    .price-table {
+        width: 80%
     }
 }
