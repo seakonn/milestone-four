@@ -29,6 +29,10 @@ body {
     margin-left: 0.5rem;
 }
 
+.page-heading {
+    margin-top: 2rem;
+}
+
 .home-image {
     margin: 1rem 0;
     display: block;
