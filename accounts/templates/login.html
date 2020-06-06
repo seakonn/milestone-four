@@ -7,8 +7,9 @@ https://github.com/Code-Institute-Solutions/AuthenticationAndAuthorisation/tree/
 
 ********************************************************************
 -->
-
 {% extends 'base.html' %}
+
+{% load bootstrap_tags %}
 
 {% block page_heading %}
 Home
@@ -17,7 +18,7 @@ Home
 {% block content %}
 
 <form method="POST">
-    {% csrf_token %} {{ login_form }}
+    {% csrf_token %} {{ login_form | as_bootstrap }}
     <button type="submit">Login</button>
 </form>
 <p><a href="{% url 'password_reset' %}">Reset Password</a></p>
