@@ -11,6 +11,13 @@
 {% if user.is_authenticated %}
 
 <h4>Price List</h4>
+
+<p>Here you can request a commission for our artists to do.</p>
+
+<p>Here's how it works: Give us a description of what you would like, and the type of piece it should be. You will then be provided with a preview of what the final piece should look like. </p>
+
+<p>If you like the preview, you can then commit to a purchase, and your work will be completed and posted to you.</p>
+
 {% for type in comm_types %}
 
         <p>{{ type.type_name }} <span>€{{ type.price }}</span> </p>
