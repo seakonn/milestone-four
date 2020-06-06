@@ -11,12 +11,11 @@ https://github.com/Code-Institute-Solutions/AuthenticationAndAuthorisation/tree/
 {% extends 'base.html' %}
 
 {% block page_heading %}
-{{ user }}'s Profile
+My Commissions
 {% endblock %}
 
 {% block content %}
-    <h1>My Commissions</h1>
-
+    
     {% for commission in commissions %}
 
         <p>
