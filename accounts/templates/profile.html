@@ -16,29 +16,41 @@ My Commissions
 
 {% block content %}
     
+    
+
+<table class="table table-striped text-center price-table">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Price in €</th>
+            <th scope="col">Status</th>
+        </tr>
+    </thead>
+
+    <tbody>
     {% for commission in commissions %}
-
-        <p>
-        <span> {{ commission.name }} </span>
-        <span> {{ commission.description }} </span>
-        <span> {{ commission.type.price }} </span>
+    <tr>
+        <td> <a href="{% url 'commission' commission.id %}">{{ commission.name }}</a> </td>
+        <td> {{ commission.description }} </td>
+        <td> {{ commission.type.price }} </td>
         {% if commission.paid %}
-        <span> Paid </span>
+        <td> Paid </td>
         {% else %}
-        <span> Unpaid </span>
+        <td> Unpaid </td>
         {% endif %}
-
-        <span> <span><a href="{% url 'commission' commission.id %}">See Commission</a></span> </span>
-        
-        </p>
-        
-
+    </tr>
     {% endfor %}
 
-    {% if not commissions %}
-    <p>You haven't commissioned anything yet!</p>
+    </tbody>
+</table>
 
-    <p><a href="{% url 'request_commission' %}">Request one here</a></p>
-    {% endif %}
+{% if not commissions %}
+
+<p>You haven't commissioned anything yet!</p>
+
+<p><a href="{% url 'request_commission' %}">Request one here</a></p>
+
+{% endif %}
 
 {% endblock %}
