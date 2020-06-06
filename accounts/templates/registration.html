@@ -10,16 +10,19 @@ https://github.com/Code-Institute-Solutions/AuthenticationAndAuthorisation/tree/
 
 {% extends 'base.html' %}
 
+{% load bootstrap_tags %}
+
 {% block page_heading %}
-User Registration
+Register Account
 {% endblock %}
 
 {% block content %}
 
-<p>If you already have an account, you can <a href="{% url 'login' %}">sign in </a></p>
 <form method="POST">
-    {% csrf_token %} {{ registration_form.as_p }}
+    {% csrf_token %} {{ registration_form | as_bootstrap }}
     <button type="submit">Register</button>
 </form>
+
+<p>If you already have an account, you can <a href="{% url 'login' %}">sign in </a></p>
 
 {% endblock %}
