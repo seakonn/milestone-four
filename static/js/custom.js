@@ -9,14 +9,21 @@ function doesn't do anything.
 function displayMessageBox() {
     
     let message;
+    let element = document.getElementById("message-popup");
+
     try {
-        message = document.getElementById("message-popup").innerHTML
+        message = element.innerHTML;
     }
 
     catch(error) {
+
         console.log("Error is " +error)
         message = null;
     }
     
+    if(message) {
 
+        element.style.display = "none";
+        alert(message);
+    }
 }
