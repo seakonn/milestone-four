@@ -17,7 +17,7 @@ function displayMessageBox() {
 
     catch(error) {
 
-        console.log("Error is " +error)
+        console.log("Error is " +error);
         message = null;
     }
     
