@@ -50,3 +50,10 @@ Testing form validation:
 
 Clicking sign up link works correctly
 Clicking reset password link works correctly
+
+### Reset Password Page
+
+Tested entering email address not in database, moves to password reset sent message.
+Tested entering email address in database, does not work as expected. Results in 405 'method not allowed' error.
+
+Known issue: User cannot navigate back to main site from the django page without using the back button.
