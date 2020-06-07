@@ -3,8 +3,8 @@
 {% block content %}
 
 <h1>Your Commission</h1>
-<h2>Name: {{ commission.name }}</h2>
-<p>Desc: {{ commission.description }}</p>
+<h2>{{ commission.name }}</h2>
+<p>{{ commission.description }}</p>
 
 {% if commission.paid %}
 
@@ -14,12 +14,12 @@
 
 
 {% else %}
-    <h2>Commission Preview</h2>
+    <h3>Commission Preview</h3>
     <img src="{{ commission.type.preview_url }} " class="img-fluid" alt="Commission Preview">
 
     <p>If you are happy with your preview, you can pay for it.</p>
     <p>Price: €{{ commission.type.price }}</p>
-    <a href="{% url 'checkout' commission.id %}">Pay for Commission</a>
+    <a href="{% url 'checkout' commission.id %}" class="btn btn-primary">Pay for Commission</a>
 {% endif %}
 
 {% endblock %}
