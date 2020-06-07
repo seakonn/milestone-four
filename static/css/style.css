@@ -51,6 +51,18 @@ body {
     width: 100%;
 }
 
+.button-link {
+    color: #fff;
+    background-color: #4a525a;
+    border-color: #4a525a;
+}
+
+.button-link:hover {
+    color: #fff;
+    background-color: #3e78b2;
+    border-color: #3e78b2;
+}
+
 .footer {
 
     /*
