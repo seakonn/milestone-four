@@ -29,3 +29,24 @@ These are potential actions that users of the website would want to perform.
 ## Database
 
 Need to be able to store information commission requests recieved via forms on the site.
+
+## Testing
+
+### Base Html Page
+
+This contains the navbar and footer amongst other things.
+
+Login/Register links only appear when no user logged in.
+Both links when clicked work correctly.
+Request Commission/Profile/Logout only appear when user logged in.
+All links work correctly when clicked on.
+
+### Login Page
+
+Testing form validation:
+    Entering nothing, only email, only password will not let the form submit. Boxes are highlighted red by bootstrap.
+    Entering correct username/wrong password, correct password/wrong username, wrong password/wrong username will result in error message at top of screen.
+    Entering correct username/correct password will log user in and dispay javascript popup.
+
+Clicking sign up link works correctly
+Clicking reset password link works correctly
