@@ -79,7 +79,7 @@ https://github.com/Code-Institute-Solutions/AuthenticationAndAuthorisation/tree/
         </h1>
     
         {% if messages %}
-        <div>
+        <div id="message-popup">
         {% for message in messages %} {{ message }} {% endfor %}
         </div>
         {% endif %} {% block content %}{% endblock %}
