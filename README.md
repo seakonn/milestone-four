@@ -36,10 +36,12 @@ Need to be able to store information commission requests recieved via forms on t
 
 This contains the navbar and footer amongst other things.
 
-Login/Register links only appear when no user logged in.
-Both links when clicked work correctly.
-Request Commission/Profile/Logout only appear when user logged in.
-All links work correctly when clicked on.
+Links:
+    Login/Register links only appear when no user logged in.
+    Both links when clicked work correctly.
+    Request Commission/Profile/Logout only appear when user logged in.
+    All links work correctly when clicked on.
+    Link to homepage in top left works when clicked on.
 
 ### Login Page
 
@@ -72,3 +74,24 @@ Form validation:
 
 Known issue:
     Email address is not required. Form will submit when email field is left blank.
+
+### Request Commission Page
+
+Form validation:
+    Entering no info or missing required field(name, description): form does not submit. Required fields highlighted.
+    Entering valid info to required fields: form submits, user redirected to profile page.
+
+Known issue:
+    Commission type dropdown defaults to Statue.
+
+### Commission Page
+
+Link:
+    Link to payment page works when clicked on.
+
+### Profile Page
+
+Links:
+    All links to individual commissions work when clicked on.
+    Link to request commission page only appears when no commissions have been made.
+    Link to request commission page works when clicked on.
