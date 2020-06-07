@@ -71,9 +71,11 @@ def checkout(request, id):
     else:
         payment_form = MakePaymentForm()
         order_form = OrderForm()
+        commission = get_object_or_404(Commission, pk=id)
 
     return render(
         request, "checkout.html", {
             'order_form': order_form,
             'payment_form': payment_form,
-            'publishable': settings.STRIPE_PUBLISHABLE})
+            'publishable': settings.STRIPE_PUBLISHABLE,
+            'commission': commission})
