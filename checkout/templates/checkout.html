@@ -25,10 +25,10 @@ https://github.com/Code-Institute-Solutions/PuttingItAllTogether-Ecommerce/tree/
 
 {% block content %}
 
-<p>You are purchasing:</p>
+<p>You are purchasing: {{commission.name}}</p>
 
 
-<h6>Price: €</h6>
+<h6>Price: €{{commission.type.price}}</h6>
 
 <form role="form" method="post" id="payment-form">
     <legend>Payment Details</legend>
