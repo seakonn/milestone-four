@@ -50,65 +50,74 @@ Here the user can provide a username or password in order to be authenticated an
 
 This contains the navbar and footer amongst other things.
 
-Links:
-    Login/Register links only appear when no user logged in.
-    Both links when clicked work correctly.
-    Request Commission/Profile/Logout only appear when user logged in.
-    All links work correctly when clicked on.
-    Link to homepage in top left works when clicked on.
+#### Links
+* Login/Register links only appear when no user logged in.
+* Both links when clicked work correctly.
+* Request Commission/Profile/Logout only appear when user logged in.
+* All links work correctly when clicked on.
+* Link to homepage in top left works when clicked on.
 
 ### Login Page
 
-Testing form validation:
-    Entering nothing, or missing required field (email, password): Form will not submit. Boxes are highlighted red by bootstrap.
-    Entering correct username/wrong password, correct password/wrong username, wrong password/wrong username: Error message at top of screen. Does not submit.
-    Entering correct username/correct password will log user in and dispay javascript popup.
+#### Testing form validation
+Test | Result
+--- | ---
+Entering nothing, or missing required field (email, password) | Form will not submit. Boxes are highlighted red by bootstrap.
+Entering correct username/wrong password, correct password/wrong username, wrong password/wrong username | Error message at top of screen. Does not submit.
+Entering correct username/correct password | Logs user in and dispay javascript popup.
 
-Clicking sign up link works correctly
-Clicking reset password link works correctly
+#### Links
+* Clicking sign up link works correctly
+* Clicking reset password link works correctly
 
 ### Reset Password Page
 
-Form validation:
-    Tested entering email address not in database: moves to password reset sent message.
-    Tested entering email address in database: does not work as expected. Results in 405 'method not allowed' error.
+#### Form validation
+Test | Result
+--- | ---    
+Entering email address not in database| Moves to password reset sent message.
+Entering email address in database | Does not work as expected. Results in 405 'method not allowed' error.
 
-Known issue:
-    User cannot navigate back to main site from the django page without using the back button.
+#### Known issue
+* User cannot navigate back to main site from the django page without using the back button.
 
 ### Register Account Page
 
-Form validation:
-    Entering no info in form or missing required field(username, either password): form does not submit. Red highlights around boxes with required info.
-    Entering username that already exists: error message appears and form does not submit.
-    Using email that is in database: error message appears and form does not submit.
-    Entering mismatching passwords: error message appears and form does not submit.
-    Entering email that already exists: error message appears and form does not submit.
-    Entering correct information in all fields: form submits and javascript popup appears. User is redirected.
+#### Form validation
+Test | Result
+--- | ---
+Entering no info in form or missing required field(username, either password) | Form does not submit. Red highlights around boxes with required info.
+Entering username that already exists | Error message appears and form does not submit.
+Using email that is in database | Error message appears and form does not submit.
+Entering mismatching passwords | Error message appears and form does not submit.
+Entering email that already exists | Error message appears and form does not submit.
+Entering correct information in all fields | Form submits and javascript popup appears. User is redirected.
 
-Known issue:
-    Email address is not required. Form will submit when email field is left blank.
+#### Known issue
+* Email address is not required. Form will submit when email field is left blank.
 
 ### Request Commission Page
 
-Form validation:
-    Entering no info or missing required field(name, description): form does not submit. Required fields highlighted.
-    Entering valid info to required fields: form submits, user redirected to profile page.
+#### Form validation
+Test | Result
+--- | ---
+Entering no info or missing required field(name, description) | Form does not submit. Required fields highlighted.
+Entering valid info to required fields | Form submits, user redirected to profile page.
 
-Known issue:
-    Commission type dropdown defaults to Statue.
+#### Known issue
+* Commission type dropdown defaults to Statue.
 
 ### Commission Page
 
-Link:
-    Link to payment page works when clicked on.
+#### Link
+* Link to payment page works when clicked on.
 
 ### Profile Page
 
-Links:
-    All links to individual commissions work when clicked on.
-    Link to request commission page only appears when no commissions have been made.
-    Link to request commission page works when clicked on.
+#### Links
+* All links to individual commissions work when clicked on.
+* Link to request commission page only appears when no commissions have been made.
+* Link to request commission page works when clicked on.
 
 ## Deployment
 
