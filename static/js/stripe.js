@@ -33,7 +33,7 @@ $(function() {
             form.submit();
         } else {
             $("#stripe-error-message").text(response.error.message);
-            $("#credit-card-errors").show();
+            alert(response.error.message);
             $("#validate_card_btn").attr("disabled", false);
         }
     });
