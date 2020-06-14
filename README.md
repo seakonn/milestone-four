@@ -30,6 +30,20 @@ These are potential actions that users of the website would want to perform.
 
 Need to be able to store information commission requests recieved via forms on the site.
 
+## Features
+
+### Homepage
+
+Homepage contains welcome message for potential users and also features the navbar (which also appears on every other page). The navbar has the site logo containing a link to the homepage, and initially links prompting the user to login, or register an account. Once the user is logged in (via the login page) the navbar then changes to have links for requesting a commission, showing their profile and logging out.
+
+### Login Page
+
+Here the user can provide a username or password in order to be authenticated and obtain access to the rest of the site. User can also click on the reset password link to reset their password.
+
+### Register Page
+
+### Potential Future Features
+
 ## Testing
 
 ### Base Html Page
