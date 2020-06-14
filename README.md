@@ -95,3 +95,16 @@ Links:
     All links to individual commissions work when clicked on.
     Link to request commission page only appears when no commissions have been made.
     Link to request commission page works when clicked on.
+
+## Deployment
+
+## Credits
+
+### Content
+
+* Font Awesome Icon in navbar [from here](https://fontawesome.com/icons/paint-brush?style=solid)
+* Google Fonts used [Monserrat](https://fonts.google.com/specimen/Montserrat?preview.size=82&preview.text=OZZY) and [Aleo](https://fonts.google.com/specimen/Aleo?sort=alpha&preview.text=Recent+Commissions&preview.text_type=custom&preview.size=63&preview.layout=row&sidebar.open&selection.family=Aleo)
+
+### Media
+
+### Code
