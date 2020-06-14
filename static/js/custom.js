@@ -1,4 +1,9 @@
 document.addEventListener("load", displayMessageBox());
+document.getElementById("payment-form").addEventListener("submit", function () {
+
+    console.log("Testing");
+});
+
 
 /*
 Function checks to see if a message exists after the page loads.
