@@ -30,17 +30,31 @@ These are potential actions that users of the website would want to perform.
 
 Need to be able to store information commission requests recieved via forms on the site.
 
+### Database Setup
+
 ## Features
 
 ### Homepage
 
-Homepage contains welcome message for potential users and also features the navbar (which also appears on every other page). The navbar has the site logo containing a link to the homepage, and initially links prompting the user to login, or register an account. Once the user is logged in (via the login page) the navbar then changes to have links for requesting a commission, showing their profile and logging out.
+Homepage contains welcome message for potential users and some images of artwork which users have had commissioned (currently just stock images). It also features the navbar (which also appears on every other page). The navbar has the site logo containing a link to the homepage, and initially links prompting the user to login, or register an account. Once the user is logged in (via the login page) the navbar then changes to have links for requesting a commission, showing their profile and logging out.
 
 ### Login Page
 
-Here the user can provide a username or password in order to be authenticated and obtain access to the rest of the site. User can also click on the reset password link to reset their password.
+Here the user can provide a username or password in order to be authenticated and obtain access to the rest of the site. User can also click on the reset password link to reset their password. Logging in will redirect the user to their profile page. (which should be blank if they have just registered).
 
 ### Register Page
+
+The user can register an account with the site on this page. They must enter an email address, a username and their password before clicking register. This will add a new user to the Django admin panel. Registering will redirect the user to their profile page (which should be blank if they have just registered).
+
+### Request Commission Page
+
+The user can request art commissions on this page. They should fill out a form detailing the name of their commission, along with a description of what they want done and the type of artwork it should be. Successfully submitting this form will add a Commission object to the database which will be associated with the user who created it.
+
+### Profile Page
+
+This displays a list of Commissions which a particular user has created. It fetches the information on Commissions for that user and displays it, along with a link to the actual commission page itself. If the user has no commissions created, it will inform them of this and provide a link to create one.
+
+### Commission Page
 
 ### Potential Future Features
 
@@ -140,6 +154,8 @@ Royalty free images used from pixabay.
 * [Julius Caesar](https://cdn.pixabay.com/photo/2020/02/25/01/10/julius-caesar-4877717_960_720.png)
 
 ### Code
+
+Credits for pieces of code used in the project.
 
 * Accounts app from [Code Institute Github](https://github.com/Code-Institute-Solutions/AuthenticationAndAuthorisation/tree/master/07-CustomAuthentication/01-email_authentication/accounts)
 * Checkout app from [Code Institute Github](https://github.com/Code-Institute-Solutions/PuttingItAllTogether-Ecommerce/tree/master/03-HostingYourEcommerceWebApp/07-heroku_hosting/checkout)
