@@ -60,6 +60,12 @@ This page gets the information for a particular commission from the database and
 
 ### Potential Future Features
 
+As it is currently implemented, the site uses dummy images for displaying both the preview image and the completed (paid for) image of the commission. Realistically, what should happen is that once a commission is requested, an artist could then work on a preview which would then be uploaded seperately and the user could be potentailly contacted to let them know that their preview is ready. They would not immediately get access to a preview like it currently exists.
+
+Similarly, once the commission is paid for, the user currently gets an instant link to their completed commission. Again, this would be changed so that upon payment, an artist would be notified to continue working and finish the commission; with the completed commission image being uploaded seperately.
+
+There could also be a mechanism for deleting unpaid commissions from the profile, which would then inform the artist to stop working on that particular commission.
+
 ## Testing
 
 ### Base Html Page
