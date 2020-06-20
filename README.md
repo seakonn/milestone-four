@@ -56,6 +56,8 @@ This displays a list of Commissions which a particular user has created. It fetc
 
 ### Commission Page
 
+This page gets the information for a particular commission from the database and displays the information via the page (including its name, description and preview image). Here the user can see the preview of what their work would look like should they decide to purchase it. The page also contains a link to the payment page for that item.
+
 ### Potential Future Features
 
 ## Testing
