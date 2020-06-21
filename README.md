@@ -172,6 +172,18 @@ Entering valid info to required fields | Form submits, user redirected to profil
 
 ## Deployment
 
+### Hosting the database
+
+To host the database, I had to create a heroku app on their site. Once done, I could go to heroku addons for that app and add a postgres database addon. The next step was to disconnect the local database and start using the new heroku one. This is done by installing `dj-database-url` and `psycopg2` and changing the `DATABASE` setting in the settings.py file. Migrating the database then switches it to the new heroku one, and since this database is blank, we have to create a new super user. We also have to set up the database for customer use using the admin panel which is [described above](#database-setup)
+
+### Hosting The Static Files
+
+The static files are to be stored using amazon cloud services so I had to set up an account with them and configure a 'bucket' to store things in. Once that is done I have to install `boto3` and `django-storages` which are used to connect to AWS. I had to edit settings.py again to configure it to use AWS. Then we run `collectstatic` to upload the local static files to Amazon's servers.
+
+### Deploying to Heroku
+
+I had to copy all the environment variables from my local environment to the settings page on Heroku. In addition a `COLLECTSTATIC` variable was added to stop static files being uploaded in the future. The site is run using a program called `gunicorn` so I installed that next. Heroku needs a procfile to run stuff so I had to create that as well. Finally I had to update the requirements.txt file, add my app to the 'allowed hosts' in settings.py and turn off the debug mode as well. Once all of this was complete, I pushed the code to githhub and then deployed the branch from heroku to make the site go live.
+
 ## Credits
 
 ### Content
