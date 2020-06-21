@@ -49,6 +49,18 @@ It should be noted that the preview and completed urls are a necessity here beca
 
 ### Database Setup
 
+The Commission objects are user submitted, so they don't need any setting up.
+
+The Commisison types are predetermined by the site owner so they are set up using the django admin panel. For this project there are four types. The database is set up with the information in the table below:
+
+Name | Price | Preview URL | Completed URL
+--- | --- | --- | ---
+Wooden Sculpture | 40 | [Preview](https://raw.githubusercontent.com/seakonn/milestone-four/master/static/img/elephant_pixellated.jpg) | [Completed](https://raw.githubusercontent.com/seakonn/milestone-four/master/static/img/elephant_normal.jpg)
+Small Painting | 30 | [Preview](https://raw.githubusercontent.com/seakonn/milestone-four/master/static/img/painting_pixellated.jpg) | [Completed](https://raw.githubusercontent.com/seakonn/milestone-four/master/static/img/painting_normal.jpg)
+Large Painting | 50 | [Preview](https://raw.githubusercontent.com/seakonn/milestone-four/master/static/img/art_pixellated.jpg) | [Completed](https://raw.githubusercontent.com/seakonn/milestone-four/master/static/img/art_normal.jpg)
+Statue | 100 | [Preview](https://raw.githubusercontent.com/seakonn/milestone-four/master/static/img/goddess_pixellated.jpg) | [Completed](https://raw.githubusercontent.com/seakonn/milestone-four/master/static/img/goddess_normal.jpg)
+
+
 ## Features
 
 ### Homepage
