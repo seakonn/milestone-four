@@ -28,7 +28,24 @@ These are potential actions that users of the website would want to perform.
 
 ## Database
 
-Need to be able to store information commission requests recieved via forms on the site.
+Artists need to know certain information about the commission in order to begin their work. The description of the item requested is particularly important, as well as the type of item it should be (eg. painting, sculpture). The data required for the commission object is can be summarised:
+
+* Name (the name the user gives their piece)
+* Description (which the artist uses to complete the commission)
+* Owner (which user requested the commission)
+* Type (the type of work the commission should be)
+* Paid (a value to determine if the user has paid for a particular commission)
+
+The owner is a foreign key in the database which links to the django User class for the user that requested the commission. The type is also a foreign key of a class called CommissionType, described below.
+
+Since the types of work can be quite varied, depending on the particular skills of the artist on staff, the types of commmissions can vary over time. Making the Type field in the commission object a foreign key is therefore a necessity. A CommissionType is defined as having:
+
+* Name (like 'painting', 'statue', 'carving')
+* Price (different types have different prices)
+* Preview URL (a link to the preview image of that particular commission)
+* Completed URL (a link to the completed image of that particular commission)
+
+It should be noted that the preview and completed urls are a necessity here because of the way the site is implemented. Ideally they would be a part of the commission object itself. (For more information on this see the ['future features'](#potential-future-features))
 
 ### Database Setup
 
